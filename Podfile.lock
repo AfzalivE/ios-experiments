@@ -1,0 +1,23 @@
+PODS:
+  - GoogleMaps (2.2.0):
+    - GoogleMaps/Maps (= 2.2.0)
+  - GoogleMaps/Base (2.2.0)
+  - GoogleMaps/Maps (2.2.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.2.0):
+    - GoogleMaps/Base (= 2.2.0)
+  - RandomUserSwift (0.04)
+
+DEPENDENCIES:
+  - GoogleMaps
+  - GooglePlaces
+  - RandomUserSwift
+
+SPEC CHECKSUMS:
+  GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
+  GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
+  RandomUserSwift: 11090185caf2ec0f9f17ca501945b37a4d1d83c0
+
+PODFILE CHECKSUM: 2abfd00051c3e8ada6b50b2705f2b2bf7a80e356
+
+COCOAPODS: 1.2.1
