@@ -7,7 +7,7 @@ import UIKit
 
 class UserListDataSource: NSObject, UITableViewDataSource {
 
-    let dataStore = DataStore()
+    let dataStore = DataStore.sharedInstance
 
     // MARK: - Table view data source
 
@@ -24,8 +24,10 @@ class UserListDataSource: NSObject, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as? UserTableViewCell else {
             fatalError("The dequeued cell is not an instance of UserTableViewCell.")
         }
+        
+        cell.setUser(user)
 
-        cell.nameLabel?.text = user.name
         return cell
     }
+    
 }

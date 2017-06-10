@@ -19,5 +19,4 @@ public class User {
         self.name = name
         self.photo = photo
     }
-
 }

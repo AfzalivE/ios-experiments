@@ -25,4 +25,9 @@ class UserTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func setUser(_ user: User) {
+        nameLabel?.text = user.name
+        photoImageView?.image = user.photo
+    }
+
 }

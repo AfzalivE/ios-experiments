@@ -38,4 +38,30 @@ class ViewController: UIViewController {
     private func loadUsers() {
         userListView.dataSource = dataSource
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+            case "ShowDetail":
+                guard let userDetailViewController = segue.destination as? UserViewController else {
+                    fatalError("Unexpected destination: \(segue.destination)")
+                }
+
+                guard let selectedUserCell = sender as? UserTableViewCell else {
+                    fatalError("Unexpected sender: \(sender)")
+                }
+
+                guard let indexPath = userListView.indexPath(for: selectedUserCell) else {
+                    fatalError("The selected cell is not being displayed by the table")
+                }
+
+                let selectedUser = DataStore.sharedInstance.allUsers()[indexPath.row]
+                userDetailViewController.user = selectedUser
+
+            default:
+                fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+
+        }
+    }
 }

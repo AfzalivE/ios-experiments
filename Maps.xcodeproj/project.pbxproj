@@ -15,6 +15,7 @@
 		5871B7C7233E8977AC1F1741 /* MapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5871B1D5B74678F6DA6FA103 /* MapsTests.swift */; };
 		5871B81997D949946A85BEAF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5871B189DEFD0D926CDD2E08 /* .gitignore */; };
 		5871B821A5BC9CF9A5171811 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5871BF18452974FE97531A09 /* ViewController.swift */; };
+		5871B83CE79A8253E9D123C5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5871B5F4CD95FDD8FBE96A1E /* UserViewController.swift */; };
 		5871B868D4ED2FD04D49A27F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5871B0C133BAAC3A0DC60002 /* LaunchScreen.storyboard */; };
 		5871BBBBB1B68B61A7E95F8A /* UserListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5871B73DCF7F2D322BC82C9C /* UserListDataSource.swift */; };
 		5871BDA24172C23F01B80789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5871BB6EE6D67545A24D0731 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		5871B189DEFD0D926CDD2E08 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		5871B1D5B74678F6DA6FA103 /* MapsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsTests.swift; sourceTree = "<group>"; };
 		5871B373C02F3C19F7AFF9A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5871B5F4CD95FDD8FBE96A1E /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		5871B73DCF7F2D322BC82C9C /* UserListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListDataSource.swift; sourceTree = "<group>"; };
 		5871B8046E27FDF5047B5CD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5871B90F9F1F79240E3A80F9 /* MapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 				5871B150525CD8B4E5C6922F /* User.swift */,
 				5871B73DCF7F2D322BC82C9C /* UserListDataSource.swift */,
 				5871BEF05734AEE6E851A23F /* DataStore.swift */,
+				5871B5F4CD95FDD8FBE96A1E /* UserViewController.swift */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				5871B288A0C4152C1E8972F2 /* User.swift in Sources */,
 				5871BBBBB1B68B61A7E95F8A /* UserListDataSource.swift in Sources */,
 				5871B5EF309B648A4B75303A /* DataStore.swift in Sources */,
+				5871B83CE79A8253E9D123C5 /* UserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
