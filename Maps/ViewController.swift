@@ -26,13 +26,17 @@ class ViewController: UIViewController {
     private func loadMap() {
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
 
+        mapContainerView.frame = .zero
         mapContainerView.camera = camera
+        mapContainerView.settings.myLocationButton = true
 
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapContainerView
+//        let marker = GMSMarker()
+//        marker.isDraggable = true
+//        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
+//        marker.title = "Sydney"
+//        marker.snippet = "Australia"
+//        marker.map = mapContainerView
+        
     }
 
     private func loadUsers() {
