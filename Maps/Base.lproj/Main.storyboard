@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BlH-DK-x4o">
-    <device id="retina3_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -21,39 +17,49 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="78l-7c-CEH">
-                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ss2-a6-BCD" customClass="GMSMapView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="223"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xl7-Ae-adw">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="344"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sad_cloud.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Oq-eH-jS1">
-                                                <rect key="frame" x="148" y="99" width="24" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ss2-a6-BCD" customClass="GMSMapView">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="343"/>
+                                                <color key="backgroundColor" red="0.24420596943775674" green="0.9843008623522721" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="2Oq-eH-jS1">
+                                                <rect key="frame" x="288" y="159" width="24" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="6yc-0w-5ew"/>
                                                     <constraint firstAttribute="width" constant="24" id="QqQ-fv-JjX"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.24420596943775674" green="0.9843008623522721" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="2Oq-eH-jS1" firstAttribute="centerY" secondItem="Ss2-a6-BCD" secondAttribute="centerY" id="ZEj-bi-LgK"/>
-                                            <constraint firstItem="2Oq-eH-jS1" firstAttribute="centerX" secondItem="Ss2-a6-BCD" secondAttribute="centerX" id="mDh-d4-fpV"/>
-                                            <constraint firstItem="2Oq-eH-jS1" firstAttribute="top" secondItem="Ss2-a6-BCD" secondAttribute="top" constant="99" id="t1x-2K-5RP"/>
+                                            <constraint firstItem="Ss2-a6-BCD" firstAttribute="centerY" secondItem="2Oq-eH-jS1" secondAttribute="centerY" id="87o-sn-Dqi"/>
+                                            <constraint firstItem="Ss2-a6-BCD" firstAttribute="centerX" secondItem="2Oq-eH-jS1" secondAttribute="centerX" id="HNe-Qj-xlx"/>
+                                            <constraint firstItem="Ss2-a6-BCD" firstAttribute="top" secondItem="xl7-Ae-adw" secondAttribute="top" id="UAp-Fm-0E8"/>
+                                            <constraint firstItem="Ss2-a6-BCD" firstAttribute="centerY" secondItem="xl7-Ae-adw" secondAttribute="centerY" id="Unh-Rk-ZZp"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ss2-a6-BCD" secondAttribute="trailing" id="UxF-JM-PgE"/>
+                                            <constraint firstItem="Ss2-a6-BCD" firstAttribute="leading" secondItem="xl7-Ae-adw" secondAttribute="leading" id="a9w-oW-ZFJ"/>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ey4-DZ-0oQ">
-                                        <rect key="frame" x="0.0" y="223" width="320" height="193"/>
+                                        <rect key="frame" x="0.0" y="344" width="600" height="192"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="192" id="OiZ-BA-WXF"/>
+                                        </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserTableViewCell" rowHeight="90" id="xPs-tL-7Iy" customClass="UserTableViewCell" customModule="Maps" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="320" height="90"/>
+                                                <rect key="frame" x="0.0" y="28" width="600" height="90"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xPs-tL-7Iy" id="eBt-TQ-coc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="bW1-3p-E9W" userLabel="Photo Image View">
@@ -63,7 +69,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrE-c3-b9l" userLabel="Name Label">
-                                                            <rect key="frame" x="96" y="8" width="279" height="21"/>
+                                                            <rect key="frame" x="96" y="8" width="559" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -90,9 +96,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ey4-DZ-0oQ" secondAttribute="trailing" id="C1K-kE-1Er"/>
                                     <constraint firstItem="ey4-DZ-0oQ" firstAttribute="centerX" secondItem="78l-7c-CEH" secondAttribute="centerX" id="bfv-aF-lyI"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ss2-a6-BCD" secondAttribute="trailing" id="e7X-YS-xRN"/>
                                     <constraint firstItem="ey4-DZ-0oQ" firstAttribute="leading" secondItem="78l-7c-CEH" secondAttribute="leading" id="j8h-Jj-exb"/>
-                                    <constraint firstItem="Ss2-a6-BCD" firstAttribute="leading" secondItem="78l-7c-CEH" secondAttribute="leading" id="zDe-Vq-kmu"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -123,11 +127,11 @@
                         <viewControllerLayoutGuide type="bottom" id="GWl-Ss-HeM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Krc-LS-9yI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C9B77D04-6D62-4617-BCC1-4C5911E4C0D2" translatesAutoresizingMaskIntoConstraints="NO" id="W6W-Ki-CJc" userLabel="Photo Image View">
-                                <rect key="frame" x="80" y="106" width="160" height="160"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="04B601D6-EC74-4B24-AE2E-B267459F269A" translatesAutoresizingMaskIntoConstraints="NO" id="W6W-Ki-CJc" userLabel="Photo Image View">
+                                <rect key="frame" x="150" y="106" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="W6W-Ki-CJc" secondAttribute="height" multiplier="1:1" id="jWw-gT-aOL"/>
                                 </constraints>
@@ -185,9 +189,26 @@
             </objects>
             <point key="canvasLocation" x="1822" y="605"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="LzL-da-Jnu">
+            <objects>
+                <viewController id="v3B-A7-ucc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="efU-if-lSu"/>
+                        <viewControllerLayoutGuide type="bottom" id="30U-eO-SKg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="96k-mm-lnf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JcA-3E-Oe5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
-        <image name="C9B77D04-6D62-4617-BCC1-4C5911E4C0D2" width="540" height="540">
+        <image name="04B601D6-EC74-4B24-AE2E-B267459F269A" width="540" height="540">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -19683,7 +19704,7 @@ ABHW2A
 </mutableData>
         </image>
         <image name="defaultPhoto" width="540" height="540"/>
-        <image name="sad_cloud.png" width="144" height="96"/>
+        <image name="location" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dRQ-Fc-ArR"/>

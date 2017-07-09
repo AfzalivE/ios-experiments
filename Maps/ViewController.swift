@@ -10,7 +10,7 @@ import UIKit
 import GoogleMaps
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GMSMapViewDelegate {
     @IBOutlet weak var mapContainerView: GMSMapView!
     @IBOutlet weak var userListView: UITableView!
 
@@ -30,13 +30,12 @@ class ViewController: UIViewController {
         mapContainerView.camera = camera
         mapContainerView.settings.myLocationButton = true
 
-//        let marker = GMSMarker()
-//        marker.isDraggable = true
-//        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-//        marker.title = "Sydney"
-//        marker.snippet = "Australia"
-//        marker.map = mapContainerView
-        
+        mapContainerView.delegate = self
+    }
+
+    internal func mapView(_ mapView: GMSMapView, idleAt cameraPosition: GMSCameraPosition) {
+        let position = cameraPosition.target
+        print("Position: \(position.latitude), \(position.longitude)")
     }
 
     private func loadUsers() {
